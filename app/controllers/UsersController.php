@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 class UsersController extends \BaseController {
 
@@ -94,8 +94,25 @@ class UsersController extends \BaseController {
 
 	public function loginAttempt() 
 	{
-		;
+		if (Auth::attempt([
+				'email' 	=> Input::get('email'),
+				'password'	=> Input::get('password')
+			])) {
+			return Redirect::intended('/home');
+		} else {
+			dd(Input::all());
+			Session::flash('error', 'Your inputs were wrong. Please try again');
+			return Redirect::back()->withInput();
+		}
 	}
 
+	public function logout() 
+	{
+		Auth::logout();
+		return Redirect::action('HomeController@showWelcome');
+	}
 
 }
+
+
+
