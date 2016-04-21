@@ -6,8 +6,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-	@yield('navbar')
+	@include('partials.navbar')
 	@yield('content')
-	@yield('footer')
+	@include('parfooter')
 </body>
 </html>
