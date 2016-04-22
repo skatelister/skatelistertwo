@@ -98,7 +98,7 @@ class UsersController extends \BaseController {
 				'email' 	=> Input::get('email'),
 				'password'	=> Input::get('password')
 			])) {
-			return Redirect::intended('/home');
+			return Redirect::intended('/');
 		} else {
 			dd(Input::all());
 			Session::flash('error', 'Your inputs were wrong. Please try again');

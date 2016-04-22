@@ -6,3 +6,4 @@ Route::resource('/users', 'UsersController');
 Route::resource('/posts', 'PostsController');
 Route::get('/login', 'UsersController@login');
 Route::post('/login', 'UsersController@loginAttempt');
+

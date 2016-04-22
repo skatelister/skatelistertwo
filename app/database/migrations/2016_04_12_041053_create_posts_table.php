@@ -16,7 +16,7 @@ class CreatePostsTable extends Migration {
 		{
 			$table->increments('id')->unsigned();
 			$table->string('title');
-			$table->boolean('available');
+			$table->boolean('available')->default(1);
 			$table->string('category');
 			$table->text('description');
 			$table->string('image');
