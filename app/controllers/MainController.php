@@ -3,8 +3,9 @@
 class MainController extends \BaseController {
 
 	public function home() 
-	{
-		return View::make('sections.home');
+	{	
+		$posts = Post::all();
+		return View::make('sections.home', ['posts' => $posts]);
 	}
 
 

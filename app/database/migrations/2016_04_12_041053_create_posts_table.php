@@ -22,7 +22,7 @@ class CreatePostsTable extends Migration {
 			$table->string('image');
 			$table->integer('user_id')->unsigned()->length(10);
 			$table->foreign('user_id')->references('id')->on('users');
-			$table->integer('views');
+			$table->integer('views')->default(0);
 			$table->timestamps();
 		});
 	}
