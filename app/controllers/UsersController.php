@@ -48,7 +48,8 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$user = User::findById($id);
+
+		$user = User::find($id);
 	}
 
 
